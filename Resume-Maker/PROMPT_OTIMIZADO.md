@@ -43,6 +43,7 @@ Não use informações externas sobre o candidato. Pesquisas externas podem ajud
     - requisitos não atendidos ou não comprovados;
     - nota de 0 a 10 para um tech recruiter humano;
     - nota de 0 a 10 para compatibilidade ATS;
+    - insights sobre melhorias no currículo;
     - limitações e recomendações sem inventar informações.
 
 ## Critérios de avaliação
