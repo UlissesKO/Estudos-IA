@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo - Ulisses Kelermann Oliveira</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 8mm 10mm 8mm 10mm;
+            @bottom-right {
+                content: "Página " counter(page) " de " counter(pages);
+                font-family: Arial, sans-serif;
+                font-size: 8pt;
+                color: #718096;
+            }
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #2d3748;
+            line-height: 1.28;
+            margin: 0;
+            padding: 0;
+            font-size: 8.7pt;
+            background-color: #ffffff;
+        }
+
+        .header {
+            margin-bottom: 8px;
+            border-bottom: 2px solid #1a365d;
+            padding-bottom: 4px;
+        }
+
+        h1 {
+            font-size: 16pt;
+            color: #1a365d;
+            margin: 0 0 2px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 9.5pt;
+            font-weight: bold;
+            color: #4a5568;
+            margin: 0 0 3px 0;
+        }
+
+        .contact-info {
+            display: block;
+            font-size: 8.2pt;
+            color: #4a5568;
+            line-height: 1.45;
+        }
+
+        .contact-info span {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .section {
+            margin-bottom: 7px;
+            page-break-inside: auto;
+        }
+
+        h2 {
+            font-size: 9.8pt;
+            color: #1a365d;
+            text-transform: uppercase;
+            margin: 6px 0 4px 0;
+            border-left: 3px solid #2b6cb0;
+            padding-left: 5px;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 9pt;
+            color: #2d3748;
+            margin: 4px 0 2px 0;
+        }
+
+        p {
+            margin: 0 0 4px 0;
+            text-align: justify;
+        }
+
+        .experience-item,
+        .course-item,
+        .certification-item {
+            margin-bottom: 5px;
+            page-break-inside: avoid;
+        }
+
+        .item-header {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 2px;
+        }
+
+        .item-header .company {
+            font-size: 9.3pt;
+        }
+
+        .item-header .date {
+            float: right;
+            font-weight: normal;
+            color: #4a5568;
+            font-size: 8.2pt;
+        }
+
+        ul {
+            margin: 2px 0 4px 0;
+            padding-left: 16px;
+        }
+
+        li {
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .skills-list li {
+            margin-bottom: 3px;
+        }
+
+        .course-list,
+        .certification-list {
+            margin-top: 2px;
+        }
+
+        .source {
+            color: #4a5568;
+            font-size: 7.7pt;
+            white-space: nowrap;
+        }
+
+        a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Ulisses Kelermann Oliveira</h1>
+        <div class="subtitle">Assistente de Segurança da Informação | IAM/PAM | SOC e Resposta a Incidentes | Engenharia da Computação</div>
+        <div class="contact-info">
+            <span><strong>Localização:</strong> Guarulhos, SP</span>
+            <span><strong>Telefone:</strong> (11) 94319-1827</span>
+            <span><strong>Email:</strong> ulisseskelermann@gmail.com</span>
+            <span><strong>LinkedIn:</strong> linkedin.com/in/ulisses-kelermann-oliveira-787b61241</span>
+            <span><strong>GitHub:</strong> github.com/UlissesKO/portifolio</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Resumo profissional</h2>
+        <p>
+            Graduando em Engenharia da Computação com atuação prática em Gestão de Identidades e Acessos (IAM), Gestão de Acessos Privilegiados (PAM), Operações de SOC, resposta a incidentes, gestão de vulnerabilidades, segurança de perímetro e automação operacional. Experiência na criação e manutenção de acessos por grupos no Active Directory integrados via LDAP, apoio em integrações SSO com SAML, gestão operacional de MFA e análise de logs no Microsoft Entra ID, auditoria de acessos privilegiados no BeyondTrust PM/PAM e troubleshooting de VPN GlobalProtect.
+        </p>
+        <p>
+            Atuação com EDR CrowdStrike Falcon, NDR Darktrace, Real-Time Response (RTR), PowerShell, Palo Alto Networks, Fortigate, GoPhish, Python e análise de logs de autenticação, VPN e firewall. Participação em POC de CrowdStrike Next-Gen SIEM e estudo de Microsoft Sentinel. Conhecimentos de base em redes, cibersegurança, segurança de nuvem, criptografia, CTI, controles de acesso, vulnerabilidades, resposta a incidentes e identidade híbrida, apoiados por certificações Fortinet NSE 1, NSE 2, NSE 3 e ISC2 Certified in Cybersecurity.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Experiência profissional</h2>
+        <div class="experience-item">
+            <div class="item-header">
+                <span class="company">Assistente de Segurança da Informação — Karina Plásticos</span>
+                <span class="date">Julho de 2025 – Atual</span>
+            </div>
+            <div class="clear"></div>
+            <ul>
+                <li><strong>IAM e administração de acessos:</strong> Criação e manutenção de acessos de usuários por meio de grupos no Active Directory (AD), integrados via LDAP. Apoio, em equipe, na configuração de integrações de Single Sign-On (SSO) utilizando SAML para plataformas corporativas em cloud.</li>
+                <li><strong>Identidade e autenticação:</strong> Gestão operacional de autenticação multifator (MFA), consulta e interpretação de logs de login no Microsoft Entra ID, triagem de alertas de identidade e identificação de falsos positivos.</li>
+                <li><strong>PAM:</strong> Auditoria e controle de acessos privilegiados a servidores utilizando BeyondTrust PM/PAM.</li>
+                <li><strong>Perímetro e acesso remoto:</strong> Gestão de regras, objetos e NAT em firewalls Next-Generation Palo Alto Networks (PAN-OS) e Fortigate. Suporte e troubleshooting de acessos remotos seguros via VPN GlobalProtect.</li>
+                <li><strong>SOC e resposta a incidentes:</strong> Monitoramento contínuo de eventos e triagem de alertas utilizando EDR CrowdStrike Falcon e NDR Darktrace. Investigação de endpoints via Real-Time Response (RTR) com PowerShell para coleta de artefatos, análise, contenção e remediação.</li>
+                <li><strong>SIEM e análise de logs:</strong> Participação técnica em POC do CrowdStrike Next-Gen SIEM e estudo de Microsoft Sentinel. Análise de logs de conexões, autenticações, VPN e firewall com apoio de GitHub Copilot e Microsoft Copilot para acelerar troubleshooting, interpretação de comandos e triagem de alertas.</li>
+                <li><strong>Phishing e conscientização:</strong> Planejamento e execução de campanhas de phishing simulado utilizando GoPhish, incluindo configuração de regras ou bypasses em e-mail, condução controlada das campanhas, análise de cliques e apoio a treinamentos de conscientização pós-campanha.</li>
+                <li><strong>Vulnerabilidades e conformidade:</strong> Avaliação técnica e triagem de vulnerabilidades e CVEs, acompanhamento de patching, alteração de registros de sistema, remediação de não conformidades e coordenação de janelas de manutenção, com articulação junto aos times de Desenvolvimento e Banco de Dados para validações.</li>
+                <li><strong>Automação e scripting:</strong> Desenvolvimento e execução de scripts em Python para automação, consumo de APIs e manipulação de dados em massa de inventário. Criação e execução de scripts em PowerShell para auditoria, investigação, desinstalação silenciosa de softwares não autorizados e remediação de ativos. Uso complementar de Bash e VS Code.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Competências técnicas</h2>
+        <ul class="skills-list">
+            <li><strong>IAM e identidade:</strong> Active Directory, LDAP, Microsoft Entra ID, ciclo de vida de identidades, MFA, SSO com SAML, identidade híbrida, autenticação, autorização, grupos e controles de acesso.</li>
+            <li><strong>PAM:</strong> BeyondTrust PM/PAM, auditoria e controle de acessos privilegiados a servidores.</li>
+            <li><strong>SOC e resposta:</strong> CrowdStrike Falcon EDR, Real-Time Response (RTR), Darktrace NDR, triagem de alertas, investigação de endpoints, coleta de artefatos, contenção e remediação.</li>
+            <li><strong>SIEM e logs:</strong> Participação em POC do CrowdStrike Next-Gen SIEM, estudo de Microsoft Sentinel, análise de logs de autenticação, conexões, VPN e firewall.</li>
+            <li><strong>Perímetro e redes:</strong> Palo Alto Networks PAN-OS, Fortigate, VPN GlobalProtect, regras, objetos, NAT, TCP/IP, modelos OSI e TCP/IP, Ethernet, IPv4, IPv6, MAC, subnetting, switches e roteadores.</li>
+            <li><strong>Segurança:</strong> firewalls, NGFW, DMZ, ACLs, IDS/IPS, criptografia, segurança de redes e nuvem, CTI, governança, compliance, vulnerabilidades, CVEs, patching e controles AAA.</li>
+            <li><strong>Automação:</strong> Python, consumo de APIs, manipulação de inventário, PowerShell, Bash, VS Code e automação de tarefas de auditoria e remediação.</li>
+            <li><strong>Phishing:</strong> GoPhish, regras e bypasses de e-mail, campanhas simuladas, análise de cliques e conscientização.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Certificações</h2>
+        <ul class="certification-list">
+            <li class="certification-item"><strong>Fortinet NSE 1 Certified in Cybersecurity</strong> — Fundamentos de cibersegurança, cenário de ameaças e conceitos básicos de nuvem. <span class="source"><a href="https://www.credly.com/badges/eb18a634-3a08-4853-93f2-87191b1b5bd8/public_url">Verificação</a></span></li>
+            <li class="certification-item"><strong>Fortinet NSE 2 Certified in Cybersecurity</strong> — Conceitos introdutórios de segurança e de Next-Generation Firewall (NGFW). <span class="source"><a href="https://www.credly.com/badges/4c580a03-2a14-4c82-b46e-30b59cdad98c/public_url">Verificação</a></span></li>
+            <li class="certification-item"><strong>Fortinet NSE 3 Certified in Cybersecurity</strong> — Operação e configuração de base em FortiGate, incluindo interfaces, conectividade, roteamento, VLANs, NAT, políticas de firewall e monitoramento. <span class="source"><a href="https://www.credly.com/badges/b284f9db-bb65-4e55-80e3-2ca17ff84822/public_url">Verificação</a></span></li>
+            <li class="certification-item"><strong>ISC2 Certified in Cybersecurity (CC)</strong> — Princípios de segurança, governança, IAM, controles MAC/DAC/RBAC, segurança de redes, continuidade de negócios, recuperação de desastres, resposta a incidentes e operações de segurança. <span class="source"><a href="https://www.credly.com/badges/ed49d62d-5231-4f2c-85a5-47bd4fab7172/public_url">Verificação</a></span></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Cursos com certificado</h2>
+        <ul class="course-list">
+            <li class="course-item"><strong>CCNA: Introduction to Networks</strong> — Cisco Networking Academy e Senai. Fundamentos de redes, modelos OSI e TCP/IP, protocolos, Ethernet, MAC, IPv4, IPv6, subnetting, encapsulamento, switches, roteadores, redes locais, conectividade e segurança de redes. <span class="source"><a href="https://www.netacad.com/courses/ccna-introduction-networks">Curso</a></span></li>
+            <li class="course-item"><strong>Network Defense</strong> — Cisco Networking Academy. Defesa de redes, firewalls, firewall baseado em zonas, ACLs, DMZ, criptografia de tráfego, IDS/IPS, monitoramento, análise de alertas, resposta a incidentes e controles RBAC, MAC e DAC. <span class="source"><a href="https://www.netacad.com/courses/network-defense">Curso</a></span></li>
+            <li class="course-item"><strong>Cyber Threat Management</strong> — Cisco Networking Academy. Governança e compliance, testes de segurança, CTI, avaliação de vulnerabilidades, gestão de riscos, controles de segurança, fundamentos introdutórios de forense digital, análise e resposta a incidentes e Diamond Model of Intrusion. <span class="source"><a href="https://www.netacad.com/courses/cyber-threat-management">Curso</a></span></li>
+            <li class="course-item"><strong>Cybersecurity Essentials</strong> — Cisco Networking Academy e Senai. Fundamentos de segurança da informação, redes e nuvem, criptografia, segurança de Windows e Linux, análise de alertas, CTI, vulnerabilidades, riscos e fundamentos de operação e resposta. O certificado recebido está descrito como Junior Cybersecurity Analyst Career Path. <span class="source"><a href="https://www.netacad.com/career-paths/cybersecurity">Trilha</a></span></li>
+            <li class="course-item"><strong>English for IT 1</strong> — Cisco Networking Academy e OpenEDG. Vocabulário técnico, gramática, expressões idiomáticas e comunicação profissional em desenvolvimento, suporte, redes e segurança da informação. <span class="source"><a href="https://www.netacad.com/courses/english-for-it-1">Curso</a></span></li>
+            <li class="course-item"><strong>Falcon Administrator</strong> — CrowdStrike University. Administração e operação da plataforma Falcon, incluindo fundamentos de EDR, Endpoint Security, Device Management, Identity Security e Next-Gen SIEM, com aplicação de políticas, administração de dispositivos e apoio à detecção e resposta. <span class="source"><a href="https://www.crowdstrike.com/en-us/services/education/">Instituição</a></span></li>
+            <li class="course-item"><strong>Falcon Identity Specialist</strong> — CrowdStrike University. Falcon Identity Protection, postura de risco de identidades, threat hunting, ameaças baseadas em identidade, MFA, Entra ID, Okta, Active Directory híbrido, políticas de proteção e detecção de movimentação lateral. <span class="source"><a href="https://www.crowdstrike.com/en-us/crowdstrike-university/">Instituição</a></span></li>
+            <li class="course-item"><strong>Microsoft Identity and Access Administrator</strong> — Microsoft Learn, curso SC-300T00-A. IAM com Entra ID, ciclo de vida de identidades, autenticação, autorização, aplicações, identidades de carga de trabalho, identidade híbrida, governança, Zero Trust, acesso adaptável, monitoramento, relatórios e troubleshooting. Duração indicada: 96 horas. <span class="source"><a href="https://learn.microsoft.com/en-us/training/courses/sc-300t00">Curso</a></span></li>
+            <li class="course-item"><strong>Cibersegurança com Soluções Fortinet</strong> — Senai-SP, 60 horas. Gerenciamento de sistemas de cibersegurança, configuração de soluções Fortinet, tecnologias de segurança, identificação de ameaças em redes locais e nuvem, boas práticas e normas técnicas. <span class="source"><a href="https://www.sp.senai.br/curso/ciberseguranca-com-solucoes-fortinet/103396">Curso</a></span></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Formação acadêmica</h2>
+        <div class="experience-item">
+            <div class="item-header">
+                <span class="company">Graduação em Engenharia da Computação — Centro Universitário Eniac</span>
+                <span class="date">Fevereiro de 2024 – Dezembro de 2028</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Projeto pessoal</h2>
+        <p><strong>Rede virtualizada com políticas de segurança:</strong> Construção de uma topologia corporativa em Oracle VirtualBox, combinando Linux, Windows Server e firewall Fortigate. Implementação de segmentação de rede, controles AAA (Authentication, Authorization and Accounting) e regras de inspeção para aumentar a visibilidade de ameaças. Projeto apresentado como laboratório independente.</p>
+    </div>
+
+    <div class="section">
+        <h2>Idiomas</h2>
+        <ul>
+            <li><strong>Inglês intermediário/técnico:</strong> leitura e escrita de documentações de segurança, abertura de chamados, comunicação técnica e suporte TAC com fabricantes. Vocabulário profissional de tecnologia desenvolvido pelo curso English for IT 1.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
