@@ -27,23 +27,24 @@ Não use informações externas sobre o candidato. Pesquisas externas podem ajud
    - não transforme estudo ou POC em administração plena;
    - não crie resultados, métricas, cargos, datas, ferramentas ou certificações;
    - não declare certificações relacionadas que não estejam registradas como obtidas.
-6. Reescreva o HTML para destacar primeiro as experiências e competências mais relevantes para a vaga.
-7. Preserve a estrutura visual do currículo geral:
+6. Reescreva o HTML para destacar as experiências e competências mais relevantes para a vaga sem deixa-lo muito extenso.
+7. Caso o item de `conhecimentos.md` não tenha relação com a vaga descrita, não adicione-o ao curriculo, sempre busque mante-lo o mais conciso possível;
+8. Preserve a estrutura visual do currículo geral:
    - mantenha o formato HTML completo;
    - mantenha o CSS, o padrão A4, as margens, a tipografia e o estilo dos títulos;
    - não remova contatos, formação ou certificações verdadeiras;
    - não altere os links Credly existentes;
    - não inclua tabelas, colunas ou elementos que prejudiquem ATS sem necessidade.
-8. Mantenha o currículo resumido, de forma que não fique extenso e de leitura díficil. Deverá ter idealmente 1 página PDF 
-8. Use `save_optimized_resume` para salvar o resultado em `Resume-Maker/Curriculos Finalizados` com nome `.html` descritivo.
-9. Use `evaluate_resume` passando o HTML salvo.
-10. Apresente ao usuário:
+9. Mantenha o currículo resumido, de forma que não fique extenso e de leitura díficil. Deverá ter idealmente 1 página PDF 
+10. Use `save_optimized_resume` para salvar o resultado em `Resume-Maker/Curriculos Finalizados` com nome `.html` descritivo.
+11. Use `evaluate_resume` passando o HTML salvo.
+12. Após a criação do currículo otimizado, é obrigatório que apresente ao usuário via chat:
     - resumo das adaptações realizadas;
     - requisitos atendidos e evidência usada em `conhecimentos.md`;
     - requisitos não atendidos ou não comprovados;
-    - nota de 0 a 10 para um tech recruiter humano;
-    - nota de 0 a 10 para compatibilidade ATS;
-    - insights sobre melhorias no currículo;
+    - nota de 0 a 10 para um tech recruiter humano e justificativa para essa nota;
+    - nota de 0 a 10 para compatibilidade ATS e justificativa para essa nota;
+    - insights sobre o que pode ser melhorado no curriculo e como o fazer;
     - limitações e recomendações sem inventar informações.
 
 ## Critérios de avaliação

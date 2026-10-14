@@ -13,12 +13,19 @@ from mcp.server.fastmcp import FastMCP
 
 SERVER_ROOT = Path(__file__).resolve().parent
 CONTENT_ROOT = SERVER_ROOT / "Fontes de conteúdo"
+PROMPT_PATH = SERVER_ROOT / "PROMPT_OTIMIZADO.md"
 KNOWLEDGE_PATH = CONTENT_ROOT / "conhecimentos.md"
 JOB_PATH = CONTENT_ROOT / "descricao-vaga.md"
 GENERAL_RESUME_PATH = CONTENT_ROOT / "Currículo Geral.html"
 FINAL_RESUMES_ROOT = SERVER_ROOT / "Curriculos Finalizados"
 
 mcp = FastMCP("resume-maker")
+
+MANDATORY_PROMPT_INSTRUCTION = (
+	"Leia e siga obrigatoriamente o arquivo PROMPT_OTIMIZADO.md antes de qualquer ação. "
+	"Nunca execute uma operação sem consultar este prompt e obedecer suas instruções "
+	"de forma prioritária."
+)
 
 
 class _HTMLTextExtractor(HTMLParser):
@@ -71,6 +78,8 @@ def _input_status() -> dict[str, Any]:
 	knowledge = _read_text(KNOWLEDGE_PATH)
 	general_resume = _read_text(GENERAL_RESUME_PATH)
 	return {
+		"mandatory_pre_action_instruction": MANDATORY_PROMPT_INSTRUCTION,
+		"prompt_path": str(PROMPT_PATH),
 		"job_description_present": len(job) > 0 and "Abaixo do título" not in job,
 		"job_description_path": str(JOB_PATH),
 		"knowledge_path": str(KNOWLEDGE_PATH),
@@ -106,7 +115,9 @@ def get_resume_optimization_context() -> str:
 	return _json(
 		{
 			"status": _input_status(),
+			"mandatory_pre_action_instruction": MANDATORY_PROMPT_INSTRUCTION,
 			"instructions": [
+				"Leia o arquivo PROMPT_OTIMIZADO.md antes de qualquer ação e siga todas as suas instruções.",
 				"Use only claims supported by conhecimentos.md.",
 				"Preserve the HTML structure and CSS of the general resume.",
 				"Keep qualifiers such as apoio, estudo, noções and POC.",
@@ -134,6 +145,7 @@ def analyze_vacancy_match() -> str:
 	missing_terms = sorted(job_tokens - resume_tokens - {"experiência", "profissional"})
 	return _json(
 		{
+			"mandatory_pre_action_instruction": MANDATORY_PROMPT_INSTRUCTION,
 			"job_terms_supported_by_knowledge": evidence_terms,
 			"job_terms_already_in_general_resume": resume_terms,
 			"job_terms_not_in_general_resume": missing_terms,
@@ -167,6 +179,7 @@ def evaluate_resume(resume_html: str | None = None) -> str:
 	)
 	return _json(
 		{
+			"mandatory_pre_action_instruction": MANDATORY_PROMPT_INSTRUCTION,
 			"recruiter_human_score": recruiter_score,
 			"ats_score": ats_score,
 			"matched_terms": sorted(matched),
@@ -190,6 +203,7 @@ def save_optimized_resume(resume_html: str, output_filename: str = "Currículo O
 	output_path.write_text(resume_html, encoding="utf-8")
 	return _json(
 		{
+			"mandatory_pre_action_instruction": MANDATORY_PROMPT_INSTRUCTION,
 			"saved": True,
 			"path": str(output_path),
 			"next_step": "Call evaluate_resume with the saved HTML and report both scores.",
@@ -200,7 +214,9 @@ def save_optimized_resume(resume_html: str, output_filename: str = "Currículo O
 @mcp.tool()
 def get_server_status() -> str:
 	"""Report whether the MCP inputs are ready for an optimization run."""
-	return _json(_input_status())
+	status = _input_status()
+	status["mandatory_pre_action_instruction"] = MANDATORY_PROMPT_INSTRUCTION
+	return _json(status)
 
 
 if __name__ == "__main__":

@@ -119,6 +119,7 @@ As notas são métricas auxiliares e devem ser acompanhadas de uma análise qual
 ## Fluxo recomendado
 
 1. Preencha `descricao-vaga.md`.
+3. Leia `PROMPT_OTIMIZADO.md`
 2. Execute `get_server_status`.
 3. Execute `get_resume_optimization_context`.
 4. Execute `analyze_vacancy_match`.

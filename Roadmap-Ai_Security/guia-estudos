@@ -1,0 +1,82 @@
+# 🗺️ Mapa de Estudos: AI Security Specialist (iFood)
+
+> **Contexto:** Guia de preparação focado na transição de fundamentos de Segurança de Infraestrutura/Blue Team, Python e CI/CD para o ecossistema de Segurança em Inteligência Artificial Generativa (LLMs, Agentes, Guardrails e Supply Chain de ML).
+
+---
+
+## 📌 Introdução e Visão Geral
+
+A área de **AI Security** é recente e em rápida expansão. A maior parte dos profissionais migra de áreas consolidadas como Segurança da Informação tradicional, Engenharia de Software ou Infraestrutura. 
+
+A chave para dominar essa posição no iFood é utilizar a bagagem prévia de **Blue Team, redes, automação em Python e CI/CD** para proteger e testar um **novo tipo de software**: os Modelos de Linguagem (LLMs), Agentes e suas integrações.
+
+---
+
+## 🧭 Trilha de Aprendizado: Do Zero ao Nível da Vaga
+
+### Nível 1: Entendendo o Funcionamento das Aplicações de IA
+Antes de proteger ou atacar, é necessário entender como uma aplicação moderna de IA é estruturada e como os dados fluem.
+
+1. **O Fluxo de uma Aplicação Baseada em LLM:**
+   * **Diferença entre Modelo e Aplicação:** Entender a separação entre o modelo em si (o "cérebro", ex: GPT-4, Llama) e a aplicação ao redor dele (APIs, contexto, rotas).
+   * **Prompts e System Prompts:** Como funcionam as instruções de sistema (*System Prompt*) que definem as regras do agente e como o texto do usuário é anexado a elas.
+   * **Retrieval-Augmented Generation (RAG):** Compreender como a IA consulta uma base de conhecimento externa (banco de vetores) antes de responder.
+
+2. **Conectores e Extensões:**
+   * **Skills / Tools:** Funções executáveis (geralmente Python/TypeScript) que a IA decide chamar autonomamente para realizar ações externas (ex: consultar banco de dados, enviar e-mails, chamar APIs).
+   * **Model Context Protocol (MCP):** O protocolo padrão aberto para conectar a IA de forma padronizada e segura a dados e ferramentas locais ou remotas.
+
+---
+
+### Nível 2: Os Principais Ataques (Como a IA é Burlada)
+Em aplicações de IA, o texto fornecido pelo usuário é processado como instrução de execução. É nessa ambiguidade entre instrução e dado que surgem as principais vulnerabilidades.
+
+1. **OWASP Top 10 for LLM Applications:**
+   * Estudar detalhadamente o documento padrão da indústria citado nos requisitos da vaga.
+
+2. **Principais Vetores de Ataque:**
+   * **Prompt Injection Direto:** O usuário envia uma mensagem tentando fazer a IA ignorar suas regras originais (*System Prompt*) e executar comandos não autorizados.
+   * **Prompt Injection Indireto (Cross-Domain):** A IA processa um dado externo (PDF, e-mail, site) contendo instruções maliciosas escondidas que assumem o controle do agente.
+   * **Jailbreaking:** Engenharia de prompt para fazer a IA burlar suas próprias restrições éticas ou políticas de segurança (ex: DAN, ciphering, multi-turn prompts).
+   * **Data Leakage (Vazamento de Dados):** Técnicas para fazer a IA revelar informações do *System Prompt*, PII (dados pessoais) ou segredos de outros usuários no contexto.
+   * **Abuso de Ferramentas (Tool Abuse):** Induzir o agente a executar uma *Skill* ou chamada de API com parâmetros maliciosos (ex: exclusão de registros ou privilégios elevados).
+   * **Manipulação de Contexto / Poisoning:** Corrupção do contexto do agente ou da base de dados RAG.
+
+---
+
+### Nível 3: Ferramentas e Mecanismos de Defesa (Red & Blue Team para IA)
+Aplicações práticas para testar, monitorar e proteger o tráfego de aplicações de IA.
+
+1. **Automação de Testes e Red Teaming:**
+   * **Promptfoo:** Ferramenta central para avaliação automatizada de prompts, testes de regressão e red teaming via arquivos de configuração simples e scripts.
+   * **Frameworks Complementares:** Exploração de **Garak**, **PyRIT** (Microsoft) e **DeepEval**.
+   * **Prática Gamificada:** Plataformas como **Gandalf (Lakera)** e **HackAPrompt** para treinamento de extração de segredos e bypass de prompts.
+
+2. **Controles de Defesa, Observabilidade e Tráfego:**
+   * **Guardrails / LLM Firewalls:** Camadas de validação como **NeMo Guardrails (NVIDIA)**, **Llama Guard (Meta)** ou **Guardrails AI** para analisar entradas do usuário e saídas da IA em tempo real.
+   * **AI Gateways:** Proxies centralizados (ex: Portkey, LiteLLM, Langfuse) para gerenciar credenciais, impor *rate limit*, efetuar *logging* e auditoria de tráfego.
+   * **Anonymizer / Data Masking:** Tecnologias para remoção e sanitização de dados sensíveis (PII) antes do envio aos provedores de LLM.
+   * **Gestão de Sinais:** Calibragem de regras e heurísticas para redução de falsos positivos e falsos negativos em análises de tráfego.
+
+---
+
+### Nível 4: Segurança em Agentes, Identidade e Supply Chain (MLSecOps)
+Proteção da infraestrutura de execução, credenciais e pipelines de entrega.
+
+1. **Identidade e Controle de Acesso para Agentes:**
+   * **Propagação de Identidade:** Uso de **Token Exchange (RFC 8693)** e OAuth2 para garantir que o agente atue estritamente sob as permissões do usuário solicitante (*least privilege*).
+   * **Revisão de MCPs e Skills:** Análise de segurança de código, permissões e sanitização de inputs em ferramentas utilizadas por desenvolvedores e agentes internos/user-facing.
+
+2. **Supply Chain de ML & Quality Gates em CI/CD:**
+   * **Segurança de Artefatos:** Riscos de formatos de serialização (ex: trocar `.pkl` / Pickle por `.safetensors`).
+   * **Segurança de Dependências:** Análise de vulnerabilidades em bibliotecas do ecossistema de IA (PyTorch, LangChain, LlamaIndex, Hugging Face Hub).
+   * **Quality Gates:** Integração de testes automatizados de segurança de prompts (Promptfoo / Python scripts) nas pipelines de CI/CD (GitHub Actions / GitLab CI) antes da aprovação de deployst.
+
+---
+
+## 🎯 Planto de Ação Imediato (Primeiros Passos Práticos)
+
+* [ ] **Passo 1:** Jogar o [Gandalf (Lakera)](https://gandalf.lakera.ai) para entender na prática como funcionam os cenários de *Prompt Injection* e extração de segredos.
+* [ ] **Passo 2:** Ler o documento oficial do [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) para absorver a terminologia e os vetores de risco.
+* [ ] **Passo 3:** Instalar o **Promptfoo** localmente e rodar um teste automatizado simples contra um script Python para validar um prompt de teste contra injeções básicas.
+* [ ] **Passo 4:** Criar um repositório pessoal no Git para armazenar casos de teste, checklists de segurança e automações desenvolvidas durante os estudos.

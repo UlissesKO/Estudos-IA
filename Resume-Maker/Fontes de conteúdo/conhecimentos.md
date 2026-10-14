@@ -58,9 +58,17 @@ Escopo do arquivo = Os cursos e certificações descrevem conhecimentos estudado
 - **Automação e scripting** = Desenvolvimento e execução de scripts em Python para automação, consumo de APIs e manipulação de dados em massa de inventário. Criação e execução de scripts em PowerShell para auditoria, investigação, desinstalação silenciosa de softwares não autorizados e remediação de ativos. Conhecimentos complementares de Bash e uso do VS Code no desenvolvimento e troubleshooting.
 
 ## Outros conhecimentos
-    Descrição da área = Conhecimentos obtidos por estudo independente ou projeto pessoal, sem serem apresentados como experiência profissional formal. Esta seção também registra idiomas e nível de comunicação técnica.
+    Descrição da área = Conhecimentos obtidos por estudo independente ou projeto pessoal, sem serem apresentados como experiência profissional formal. Esta seção também registra conhecimentos gerais, projetos e idiomas, mantendo explícito o nível de domínio e o contexto de cada atividade.
 
 - **Projeto de rede virtualizada com políticas de segurança** = Construção de uma topologia corporativa em Oracle VirtualBox, combinando Linux, Windows Server e firewall Fortigate. O projeto inclui segmentação de rede, controles AAA (Authentication, Authorization and Accounting) e regras de inspeção para aumentar a visibilidade de ameaças. Deve ser apresentado como projeto pessoal ou laboratório, não como ambiente corporativo administrado em produção.
+
+- **Criação básica de MCP Servers** = Conhecimento geral e básico na criação de servidores MCP para apoiar a coleta e a sumarização de informações de ferramentas de segurança, por meio de requisições padronizadas a APIs, execução de comandos Bash ou edição padronizada de documentos. Apresentar como conhecimento geral, sem atribuir experiência profissional, especialização ou domínio avançado.
+
+- **Guardrails com NVIDIA NeMo** = Conhecimento geral em nível muito básico sobre a implantação de guardrails com NVIDIA NeMo em MCP Servers. Não apresentar como especialização, domínio avançado ou experiência profissional.
+
+- **Projeto pessoal de MCP Server para otimização de currículos** = Desenvolvimento de um MCP Server em Python, com ferramentas para fornecer ao agente o contexto da vaga e as informações factuais do candidato, analisar compatibilidade lexical, avaliar o currículo e salvar a versão otimizada. O servidor inclui uma instrução obrigatória para que o agente leia e siga um prompt de otimização antes de agir, além de regras para preservar evidências e não inventar informações. Apresentar como projeto pessoal, não como experiência profissional. [Repositório no GitHub](https://github.com/UlissesKO/Estudos-IA/tree/main/Resume-Maker)
+
+- **Projeto de MCP Server para consulta de alertas de segurança** = Projeto simples realizado com recursos da organização para consultar, por requisições GET a uma API, alertas de segurança gerados por uma ferramenta NDR e produzir sumarizações padronizadas. Inclui instruções de agente que limitam explicitamente a atuação à consulta GET dos alertas e um guardrail com NVIDIA NeMo implementado diretamente no MCP Server. Apresentar apenas como projeto realizado com recursos da organização; não inferir detalhes técnicos, resultados ou experiência profissional além do escopo descrito, nem incluir links ou informações internas.
 
 - **Inglês técnico** = Inglês intermediário voltado à leitura e escrita de documentações de segurança, abertura de chamados, comunicação técnica e suporte TAC com fabricantes. Relacionar este conhecimento a documentação, troubleshooting e comunicação profissional em tecnologia, sem afirmar fluência ou conversação avançada.
  
