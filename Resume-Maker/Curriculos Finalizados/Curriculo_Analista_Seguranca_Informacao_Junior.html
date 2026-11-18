@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo - Ulisses Kelermann Oliveira</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 8mm 10mm 8mm 10mm;
+            @bottom-right {
+                content: "Página " counter(page) " de " counter(pages);
+                font-family: Arial, sans-serif;
+                font-size: 8pt;
+                color: #718096;
+            }
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #2d3748;
+            line-height: 1.28;
+            margin: 0;
+            padding: 0;
+            font-size: 8.7pt;
+            background-color: #ffffff;
+        }
+
+        .header {
+            margin-bottom: 8px;
+            border-bottom: 2px solid #1a365d;
+            padding-bottom: 4px;
+        }
+
+        h1 {
+            font-size: 16pt;
+            color: #1a365d;
+            margin: 0 0 2px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 9.5pt;
+            font-weight: bold;
+            color: #4a5568;
+            margin: 0 0 3px 0;
+        }
+
+        .contact-info {
+            display: block;
+            font-size: 8.2pt;
+            color: #4a5568;
+            line-height: 1.45;
+        }
+
+        .contact-info span {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .section {
+            margin-bottom: 7px;
+            page-break-inside: auto;
+        }
+
+        h2 {
+            font-size: 9.8pt;
+            color: #1a365d;
+            text-transform: uppercase;
+            margin: 6px 0 4px 0;
+            border-left: 3px solid #2b6cb0;
+            padding-left: 5px;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 9pt;
+            color: #2d3748;
+            margin: 4px 0 2px 0;
+        }
+
+        p {
+            margin: 0 0 4px 0;
+            text-align: justify;
+        }
+
+        .experience-item,
+        .course-item,
+        .certification-item {
+            margin-bottom: 5px;
+            page-break-inside: avoid;
+        }
+
+        .item-header {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 2px;
+        }
+
+        .item-header .company {
+            font-size: 9.3pt;
+        }
+
+        .item-header .date {
+            float: right;
+            font-weight: normal;
+            color: #4a5568;
+            font-size: 8.2pt;
+        }
+
+        ul {
+            margin: 2px 0 4px 0;
+            padding-left: 16px;
+        }
+
+        li {
+            margin-bottom: 2px;
+            text-align: justify;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .skills-list li {
+            margin-bottom: 3px;
+        }
+
+        .course-list,
+        .certification-list {
+            margin-top: 2px;
+        }
+
+        .source {
+            color: #4a5568;
+            font-size: 7.7pt;
+            white-space: nowrap;
+        }
+
+        a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Ulisses Kelermann Oliveira</h1>
+        <div class="subtitle">Segurança da Informação | Operações SOC | EDR, Antispam, IAM e Resposta a Incidentes</div>
+        <div class="contact-info">
+            <span><strong>Localização:</strong> Guarulhos, SP</span>
+            <span><strong>Telefone:</strong> (11) 94319-1827</span>
+            <span><strong>Email:</strong> ulisseskelermann@gmail.com</span>
+            <span><strong>LinkedIn:</strong> linkedin.com/in/ulisses-kelermann-oliveira-787b61241</span>
+            <span><strong>GitHub:</strong> github.com/UlissesKO/portifolio</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Resumo profissional</h2>
+        <p>Graduando em Engenharia da Computação, com experiência profissional em Segurança da Informação desde julho de 2025. Atua em monitoramento e triagem de alertas, investigação e resposta a incidentes, Proofpoint Antispam, análise de logs, IAM, firewalls e vulnerabilidades. Experiência adicional em threat hunting inicial de e-mails, validação de impacto e troubleshooting de ferramentas em Windows e Linux.</p>
+    </div>
+
+    <div class="section">
+        <h2>Experiência profissional</h2>
+        <div class="experience-item">
+            <div class="item-header">
+                <span class="company">Assistente de Segurança da Informação — Karina Plásticos</span>
+                <span class="date">Julho de 2025 – Atual</span>
+            </div>
+            <div class="clear"></div>
+            <ul>
+                <li><strong>SOC, EDR e resposta a incidentes:</strong> Monitoramento de eventos e triagem de alertas com CrowdStrike Falcon EDR e Darktrace NDR; investigação de endpoints via RTR e PowerShell para coleta e análise de artefatos, contenção e remediação.</li>
+                <li><strong>Proofpoint Antispam e e-mail:</strong> Identificação de possíveis pontos de acesso inicial, liberação de falsos positivos e criação de regras de Email Firewall com regex e outros filtros, inclusive para resposta a reportes de e-mails fraudulentos. Analisa possíveis malwares, acesso a links e outros destinatários/alvos para validar impacto. Realiza threat hunting inicial de mensagens maliciosas que possam ter passado pelos controles, com apoio de fontes de CTI e análise de remetentes de domínios públicos, como Gmail e Outlook.</li>
+                <li><strong>IAM/PAM:</strong> Criação e manutenção de acessos por grupos no Active Directory via LDAP; gestão operacional de MFA e análise de logs no Microsoft Entra ID. Integração SSO com SAML para CrowdStrike e Qualys. Auditoria de acessos privilegiados a servidores com BeyondTrust PM/PAM.</li>
+                <li><strong>Firewall, redes e vulnerabilidades:</strong> Gestão de regras, objetos e NAT em Palo Alto Networks (PAN-OS) e Fortigate; troubleshooting de VPN GlobalProtect. Triagem de vulnerabilidades e CVEs, acompanhamento de patching, remediação de não conformidades e validações com Desenvolvimento e Banco de Dados.</li>
+                <li><strong>Sistemas e conscientização:</strong> Investigação de problemas de segurança e compatibilidade em Linux Server, Windows Server e Windows Desktop, com análise de logs e testes em PowerShell. Planejamento e execução de campanhas de phishing simulado com GoPhish, análise de cliques e apoio a treinamentos.</li>
+                <li><strong>SIEM:</strong> Participação técnica em POC do CrowdStrike Next-Gen SIEM e estudo de Microsoft Sentinel; análise de logs de conexões, autenticações, VPN e firewall. Não representa administração plena dessas plataformas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Competências técnicas</h2>
+        <ul class="skills-list">
+            <li><strong>SOC e resposta:</strong> CrowdStrike Falcon EDR, Darktrace NDR, triagem de alertas, RTR, investigação de endpoints, análise de impacto e resposta a incidentes.</li>
+            <li><strong>E-mail security:</strong> Proofpoint Antispam, Email Firewall, regex, filtros, análise de mensagens e links, liberação de falsos positivos, CTI e threat hunting inicial.</li>
+            <li><strong>IAM/PAM:</strong> Active Directory, LDAP, Microsoft Entra ID, MFA, SSO/SAML, CrowdStrike, Qualys e BeyondTrust PM/PAM.</li>
+            <li><strong>Infraestrutura e segurança:</strong> Linux Server, Windows Server/Desktop, análise de logs, PowerShell, Palo Alto Networks, Fortigate, VPN GlobalProtect, TCP/IP, firewall, ACLs, IDS/IPS e criptografia.</li>
+            <li><strong>Operações:</strong> vulnerabilidades, CVEs, patching, inventário, GoPhish, Python e automação com PowerShell.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Certificações</h2>
+        <ul class="certification-list">
+            <li class="certification-item"><strong>Fortinet NSE 1 Certified in Cybersecurity</strong> — Fundamentos de cibersegurança e cenário de ameaças. <span class="source"><a href="https://www.credly.com/badges/eb18a634-3a08-4853-93f2-87191b1b5bd8/public_url">Verificação</a></span></li>
+            <li class="certification-item"><strong>Fortinet NSE 2 Certified in Cybersecurity</strong> — Conceitos introdutórios de Next-Generation Firewall. <span class="source"><a href="https://www.credly.com/badges/4c580a03-2a14-4c82-b46e-30b59cdad98c/public_url">Verificação</a></span></li>
+            <li class="certification-item"><strong>Fortinet NSE 3 Certified in Cybersecurity</strong> — Operação e configuração de base em FortiGate, políticas e monitoramento. <span class="source"><a href="https://www.credly.com/badges/b284f9db-bb65-4e55-80e3-2ca17ff84822/public_url">Verificação</a></span></li>
+            <li class="certification-item"><strong>ISC2 Certified in Cybersecurity (CC)</strong> — Princípios de segurança, IAM, redes, operações e resposta a incidentes. <span class="source"><a href="https://www.credly.com/badges/ed49d62d-5231-4f2c-85a5-47bd4fab7172/public_url">Verificação</a></span></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Cursos com certificado</h2>
+        <ul class="course-list">
+            <li class="course-item"><strong>CCNA: Introduction to Networks</strong> — Cisco Networking Academy e Senai. Fundamentos TCP/IP, Ethernet, IPv4/IPv6, subnetting e equipamentos de rede. <span class="source"><a href="https://www.netacad.com/courses/ccna-introduction-networks">Curso</a></span></li>
+            <li class="course-item"><strong>Network Defense</strong> — Cisco Networking Academy. Firewalls, ACLs, DMZ, criptografia, IDS/IPS, análise de alertas e resposta a incidentes. <span class="source"><a href="https://www.netacad.com/courses/network-defense">Curso</a></span></li>
+            <li class="course-item"><strong>Cybersecurity Essentials</strong> — Cisco Networking Academy e Senai. Fundamentos de segurança da informação, Windows e Linux, análise de alertas, vulnerabilidades e operação de segurança. Certificado recebido descrito como Junior Cybersecurity Analyst Career Path. <span class="source"><a href="https://www.netacad.com/career-paths/cybersecurity">Trilha</a></span></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Formação acadêmica</h2>
+        <div class="experience-item">
+            <div class="item-header">
+                <span class="company">Graduação em Engenharia da Computação — Centro Universitário Eniac</span>
+                <span class="date">Fevereiro de 2024 – Dezembro de 2028</span>
+            </div>
+            <div class="clear"></div>
+            <p>Em andamento.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Idiomas</h2>
+        <ul>
+            <li><strong>Inglês intermediário/técnico:</strong> leitura e escrita de documentação e comunicação técnica.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

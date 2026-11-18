@@ -39,7 +39,7 @@ Escopo do arquivo = Os cursos e certificações descrevem conhecimentos estudado
 ## Conhecimentos profissionais
     Descrição da área = Conhecimentos e atividades obtidos no trabalho e no dia a dia profissional. Estas entradas representam experiência prática; não devem ser reduzidas a uma lista de cursos.
 
-- **Gestão de Identidades e Acessos (IAM)** = Criação e manutenção de acessos de usuários por meio de grupos no Active Directory (AD), com integração via LDAP. Apoio, em equipe, na configuração de integrações de Single Sign-On (SSO) usando SAML para plataformas corporativas em Cloud. A descrição sustenta experiência operacional em provisionamento e manutenção de acessos, mas deve preservar o termo “apoio” para as integrações SAML.
+- **Gestão de Identidades e Acessos (IAM)** = Criação e manutenção de acessos de usuários por meio de grupos no Active Directory (AD), com integração via LDAP. Realização de integrações de Single Sign-On (SSO) usando SAML para CrowdStrike e Qualys, contribuindo para uma gestão mais centralizada de identidades e acessos a essas ferramentas.
 
 - **Autenticação e monitoramento de identidades** = Gestão operacional de autenticação multifator (MFA), consulta e interpretação de logs de login no Microsoft Entra ID, triagem de alertas de identidade e identificação de falsos positivos. Relaciona-se a IAM, investigação inicial de autenticações e monitoramento de risco de identidade.
 
@@ -50,6 +50,10 @@ Escopo do arquivo = Os cursos e certificações descrevem conhecimentos estudado
 - **Operações de SOC e resposta a incidentes** = Monitoramento contínuo de eventos e triagem de alertas utilizando EDR CrowdStrike Falcon e NDR Darktrace. Investigação de endpoints via Real-Time Response (RTR) com PowerShell para coleta de artefatos, análise, contenção e remediação. Usar termos como SOC, EDR, NDR, endpoint investigation, alert triage e incident response quando forem pertinentes à vaga.
 
 - **SIEM e análise de logs** = Participação técnica em POC do CrowdStrike Next-Gen SIEM e estudo de Microsoft Sentinel. Análise de logs de conexões, autenticações, VPN e firewall com apoio de IA Generativa, incluindo GitHub Copilot e Microsoft Copilot, para acelerar troubleshooting, interpretação de comandos e triagem de alertas. Preservar “POC” e “estudo” para não apresentar essas atividades como administração plena de SIEM.
+
+- **Antispam, resposta a incidentes e threat hunting** = Atuação com Proofpoint Antispam para identificar possíveis pontos de acesso inicial de incidentes, liberar falsos positivos e criar regras de Email Firewall conforme necessário. Como entrega operacional, criação de regras com expressões regulares (regex) e outros filtros para apoiar a resposta a incidentes, incluindo relatos de e-mails fraudulentos. Validação de impacto dos e-mails por meio da análise de possíveis malwares, verificação de acesso a links e identificação de outros alvos que receberam a mensagem. Execução de threat hunting em nível inicial para buscar e-mails maliciosos que possam ter passado pelos controles, normalmente com apoio de fontes de CTI e análise de mensagens enviadas por domínios públicos, como Gmail e Outlook. Não inferir métricas quantitativas de volume ou eficácia sem dados fornecidos.
+
+- **Sistemas operacionais e troubleshooting** = Atuação profissional com Linux Server, Windows Server e Windows Desktop na investigação de problemas de segurança e compatibilidade relacionados a ferramentas. Análise de logs nos sistemas operacionais e realização de testes e verificações com PowerShell para apoiar o diagnóstico.
 
 - **Simulação de phishing e conscientização** = Planejamento e execução de campanhas de phishing simulado utilizando GoPhish, incluindo configuração de regras ou bypasses em e-mail, condução controlada das campanhas, análise de cliques e apoio a treinamentos de conscientização pós-campanha.
 

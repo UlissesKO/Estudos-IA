@@ -23,6 +23,7 @@ Não use informações externas sobre o candidato. Pesquisas externas podem ajud
 5. Compare cada requisito da vaga com `conhecimentos.md`:
    - inclua somente competências sustentadas pelo arquivo;
    - preserve qualificadores como “apoio”, “estudo”, “noções”, “introdutório” e “POC”;
+   - caso ferramenta especifica não esteja presente em `conhecimentos.md`, mas uma de tecnologia similar esteja, dê enfase na que está presente no arquivo;
    - não transforme curso em experiência profissional;
    - não transforme estudo ou POC em administração plena;
    - não crie resultados, métricas, cargos, datas, ferramentas ou certificações;
